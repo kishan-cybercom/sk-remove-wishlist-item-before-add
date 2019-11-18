@@ -14,17 +14,13 @@ class RemoveWishlistItemBeforeAdd implements ObserverInterface
 	protected $customerSession;
 	
 	protected $wishlist;
-
-	protected $jsonFactory;
 	
 	public function __construct(
 		\Magento\Customer\Model\Session $customerSession,
-		\Magento\Wishlist\Model\Wishlist $wishlist,
-		\Magento\Framework\Controller\Result\JsonFactory $jsonFactory
+		\Magento\Wishlist\Model\Wishlist $wishlist
 	) {
 		$this->customerSession = $customerSession;
         $this->wishlist = $wishlist;
-        $this->jsonFactory = $jsonFactory;
 	}
 
     public function execute(\Magento\Framework\Event\Observer $observer)
