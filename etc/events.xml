@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   SK\RemoveWishlistItemBeforeAdd
+ * @author    Kishan Savaliya <kishansavaliyakb@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch_wishlist_index_add">
+	    <observer name="wishlist_index_add_before" instance="SK\RemoveWishlistItemBeforeAdd\Observer\RemoveWishlistItemBeforeAdd" />
+	</event>
+</config>
